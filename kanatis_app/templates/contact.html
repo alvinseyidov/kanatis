@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load i18n %}
+    {% load widget_tweaks %}
+    <!-- PAGE CONTENT -->
+    <div class="page-holder custom-page-template page-full fullscreen-page clearfix">
+        <div class="contact_title">
+            <h2>{% trans 'Əlaqə' %}</h2>
+        </div>
+        <!-- SECTION 1-->
+        <section class="section-holder">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <h3 class="margin-b16">{% trans 'Address' %}:</h3>
+                        <p>{{ contact.address }}</p>
+                        <hr/>
+                        <h3 class="margin-b16">{% trans 'Phone' %}:</h3>
+                        <p>{{ contact.number }} <br> {{ contact.office_phone }}</p>
+                        <hr/>
+                        <h3 class="margin-b16">{% trans 'Office Hours' %}:</h3>
+                        <p>{{ contact.office_hour }}</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <p>{{ contact.text|safe }}</p>
+                        <div id="contact-form-holder">
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row" style="flex-wrap: nowrap">
+                                    <div class="name">
+                                        <p style="margin: 3px 15px;">{% trans 'Name' %}</p>
+                                        <div class="col-lg-12 margin-b32">{% render_field form.name class="comm-field" placeholder=form.label_suffix %}</div>
+
+                                    </div>
+                                    <div class="email">
+                                        <p style="margin: 3px 15px;">{% trans 'Email' %}</p>
+                                        <div class="col-lg-12 margin-b32">{% render_field form.email class="comm-field" placeholder=form.label_suffix %}</div>
+
+                                    </div>
+                                    <div class="subject">
+                                        <p style="margin: 3px 15px;">{% trans 'Subject' %}</p>
+                                        <div class="col-lg-12 margin-b32">{% render_field form.subject class="comm-field" placeholder=form.label_suffix %}</div>
+
+                                    </div>
+                                    {#                                    <div class="col-lg-4 margin-b32">{% render_field form.email class="comm-field" %}</div>#}
+                                    {#                                    <div class="col-lg-4 margin-b32">{% render_field form.subject class="comm-field" %}#}
+                                    {#                                    </div>#}
+                                </div>
+                                <div class="desc">
+                                    <p style="margin: 3px 15px;">{% trans 'Description' %}</p>
+                                    <div class="margin-b32">{% render_field form.desc class="comm-field" %}</div>
+
+                                </div>
+                                <p><input type="submit" value="{% trans 'Send message'|upper %}" id="submit"/></p>
+                            </form>
+                        </div>
+                        <!-- contact-form-holder-->
+                        <div id="output-contact"></div>
+                    </div>
+                    <!-- /col-lg-7-->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- /SECTION 1-->
+        <!-- SECTION 2-->
+        <section>
+            <div class="container">
+                <div class="">
+                    <div class="">
+                        <div class="maps">
+                            {{ contact.gmap_embed_address|safe }}
+                            <style>
+                                .maps a{
+                                    display: none;
+                                }
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 1500px;
+                                    width: 1500px;
+                                }
+
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 1500px;
+                                    width: 1500px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /SECTION 2-->
+    </div><!-- /PAGE CONTENT -->
+    <!-- FOOTER -->
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load i18n %}
+    {% load widget_tweaks %}
+    {% load thumbnail %}
+
+
+    <!-- PAGE CONTENT -->
+    <div class="page-holder custom-page-template page-full fullscreen-page clearfix">
+        <div class="team_title">
+            <h2>{{ text.team }}</h2>
+        </div>
+        <!-- SECTION 1-->
+        <section class="section-holder margin-b32">
+            <div class="container">
+                <div class="row">
+                    {% for i in member %}
+                        <div class="col-md-6 col-lg-3">
+                            <div class="lawyer-holder lawyer-3col">
+                                <a href="{% url 'kanatis:detail_team' i.slug %}">
+                                    {% thumbnail i.img "600x800" crop="top" as img %}
+                                        <img src='{{ img.url }}' class="img-fluid">
+                                        {% comment %}
+                                        600px 800px
+                                    {% endcomment %}
+                                    {% endthumbnail %}</a>
+                                <div class="lawyer-position">{{ i.status }}</div>
+                                <h2 class="lawyer-title"><a href="{{ i.slug }}">{{ i.name }}</a></h2>
+                                <div class="lawyer-excerpt">{{ i.short_desc|truncatechars:110 }}
+                                </div>
+                                <ul class="lawyer-social">
+                                    {% if i.twitter %}
+                                        <li><a href="{{ i.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                    {% elif i.facebook %}
+                                        <li><a href="{{ i.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                    {% elif i.instagram %}
+                                        <li><a href="{{ i.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- /SECTION 1-->
+    </div><!-- /PAGE CONTENT -->
+    <!-- FOOTER -->
+{% endblock %}

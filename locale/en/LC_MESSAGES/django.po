@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-25 11:51+0000\n"
+"PO-Revision-Date: 2020-08-30 15:44+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.4\n"
+
+#: kanatis_app/models.py:25
+msgid "First position"
+msgstr ""
+
+#: kanatis_app/models.py:26
+msgid "Second position"
+msgstr ""
+
+#: kanatis_app/models.py:27
+msgid "Third position"
+msgstr ""
+
+#: kanatis_app/models.py:28
+msgid "Fourth position"
+msgstr ""
+
+#: kanatis_app/models.py:29
+msgid "fifth position"
+msgstr ""
+
+#: kanatis_app/models.py:30
+msgid "sixth position"
+msgstr ""
+
+#: kanatis_app/models.py:31
+msgid "seventh position"
+msgstr ""
+
+#: kanatis_app/models.py:32
+msgid "eight position"
+msgstr ""
+
+#: kanatis_app/models.py:33
+msgid "ninenth position"
+msgstr ""
+
+#: kanatis_app/models.py:34
+msgid "tenth position"
+msgstr ""
+
+#: kanatis_app/models.py:74
+msgid "Service order"
+msgstr ""
+
+#: kanatis_app/models.py:89
+msgid "Subservice order"
+msgstr ""
+
+#: kanatis_app/models.py:145 kanatis_app/models.py:168
+msgid "Position ordering"
+msgstr ""
+
+#: kanatis_app/templates/about-us.html:9
+#: kanatis_app/templates/includes/footer.html:8
+#: kanatis_app/templates/includes/footer.html:34
+#: kanatis_app/templates/includes/header.html:23
+#: kanatis_app/templates/includes/header.html:109
+#: kanatis_app/templates/subabout.html:9
+msgid "About"
+msgstr ""
+
+#: kanatis_app/templates/blog-detail.html:12 kanatis_app/templates/blog.html:11
+#: kanatis_app/templates/includes/footer.html:37
+#: kanatis_app/templates/includes/header.html:54
+#: kanatis_app/templates/includes/header.html:141
+msgid "Blog"
+msgstr ""
+
+#: kanatis_app/templates/blog.html:78
+msgid "Recent Posts"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:8 kanatis_app/templates/index.html:161
+#: kanatis_app/templates/index.html:167
+msgid "Əlaqə"
+msgstr "Contact"
+
+#: kanatis_app/templates/contact.html:15
+msgid "Address"
+msgstr "Address"
+
+#: kanatis_app/templates/contact.html:18
+msgid "Phone"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:21
+msgid "Office Hours"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:32 kanatis_app/templates/index.html:201
+msgid "Name"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:37
+msgid "Email"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:42 kanatis_app/templates/index.html:207
+msgid "Subject"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:51
+msgid "Description"
+msgstr ""
+
+#: kanatis_app/templates/contact.html:55 kanatis_app/templates/index.html:213
+msgid "Send message"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:18
+#: kanatis_app/templates/includes/footer.html:38
+#: kanatis_app/templates/includes/header.html:58
+#: kanatis_app/templates/includes/header.html:145
+msgid "Contact"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:30
+msgid "Links"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:33
+#: kanatis_app/templates/includes/header.html:19
+#: kanatis_app/templates/includes/header.html:105
+msgid "Home"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:35
+#: kanatis_app/templates/includes/header.html:33
+#: kanatis_app/templates/includes/header.html:119
+msgid "Services"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:36
+#: kanatis_app/templates/includes/header.html:51
+#: kanatis_app/templates/includes/header.html:138
+msgid "Team"
+msgstr ""
+
+#: kanatis_app/templates/includes/footer.html:49
+msgid "Copyright"
+msgstr ""
+
+#: kanatis_app/templates/index.html:24 kanatis_app/templates/index.html:93
+#: kanatis_app/templates/index.html:101 kanatis_app/templates/index.html:152
+#: kanatis_app/templates/services-type.html:50
+#: kanatis_app/templates/services.html:43
+msgid "Ətraflı"
+msgstr "More"
+
+#: kanatis_app/templates/index.html:63
+#: kanatis_app/templates/services-type-detail.html:26
+#: kanatis_app/templates/services.html:9
+#: kanatis_app/templates/team-single-page.html:54
+msgid "Xidmətlər"
+msgstr "Services"
+
+#: kanatis_app/templates/index.html:110
+msgid "Xəbərlər"
+msgstr "News"
+
+#: kanatis_app/templates/index.html:171
+msgid "OFFICE"
+msgstr ""
+
+#: kanatis_app/templates/index.html:179
+msgid "PHONE"
+msgstr ""
+
+#: kanatis_app/templates/index.html:187 kanatis_app/templates/index.html:204
+msgid "EMAIL"
+msgstr ""
+
+#: kanatis_app/templates/index.html:210
+msgid "Message"
+msgstr ""
+
+#: kanatis_app/templates/services-type.html:15
+msgid "Xidmət tapılmadı"
+msgstr "Service not found"
+
+#~ msgid "Haqqımızda"
+#~ msgstr "About us"

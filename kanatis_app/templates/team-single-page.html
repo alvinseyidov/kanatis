@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load i18n %}
+    {% load thumbnail %}
+    <!-- PAGE CONTENT -->
+    <div class="page-holder custom-page-template page-full fullscreen-page clearfix">
+        <div class="team_title">
+            <h2>{{ text.team_member }}</h2>
+        </div>
+        <!-- SECTION 1-->
+        <section class="section-holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        {% thumbnail team.img "600x800" crop="top" as img %}
+                            <img src='{{ img.url }}' class="img-fluid margin-b32">
+                            {% comment %}
+                                600px 550px
+                            {% endcomment %}
+                        {% endthumbnail %}
+                       {#<img src='{{ team.img.url }}' class="img-fluid margin-b32"> -->#}
+                        <div class="pcolor margin-b16">{{ team.status }}</div>
+                        <h5 class="widgettitle">{{ team.name }}</h5>
+                        <hr/>
+                        <p><em>
+                            
+                            {% if team.email %}
+                                <a href="mailto:">{{ team.email }}</a>
+                            {% endif %}
+                                
+                        </em><br><em>
+                        {% if team.number %}
+                        {{ team.number }}
+                        {% endif %}
+                            </em></p>
+                        <ul class="about-social">
+                            {% if team.facebook %}
+                                <li><a class="social-facebook" href="{{ team.facebook }}" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            {% elif team.twitter %}
+                                <li><a class="social-twitter" href="{{ team.twitter }}" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                                </li>
+                            {% elif team.instagram %}
+                                <li><a class="social-linkedin" href="{{ team.instagram }}" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                        
+                        {% if services %}
+                        <hr/>
+                            <h5 class="widgettitle">{% trans 'Xidmətlər' %}</h5>
+                        {% endif %}
+                            
+                        <div class="sidebar widget_recent_entries">
+
+                            <ul>
+                                {% for i in services %}
+                                    <li>{{ i.serv_name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        {{ team.desc|safe }}
+                        <div class="sidebar widget_recent_entries">
+                            <ul>
+                                {% for i in sertificate %}
+                                    <li><em>{{ i.sertificate_name }}</em></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- /SECTION 1-->
+    </div><!-- /PAGE CONTENT -->
+    <!-- FOOTER -->
+{% endblock %}

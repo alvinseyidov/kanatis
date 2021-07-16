@@ -1,0 +1,52 @@
+{% load i18n %}
+<footer id="footer-var2">
+    <div id="footer-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="foo-block">
+                        <h5 class="widgettitle">{% trans 'About' %}</h5>
+                        <div class="textwidget">
+                            <div class="textwidget">
+                                <p>{{ about.description|truncatechars:370|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="foo-block">
+                        <h5 class="widgettitle">{% trans 'Contact' %}</h5>
+                        <div class="textwidget">
+                            <div class="textwidget">
+                                <p>{{ contact.address }}</p>
+                                <p>{{ contact.number }} <br>{{ contact.office_phone }} <br> {{ contact.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="foo-block">
+                        <h5 class="widgettitle">{% trans 'Links' %}</h5>
+                        <div class="textwidget custom-html-widget">
+                            <ul>
+                                <li> <a href="{% url 'kanatis:index' %}">{% trans 'Home' %}</a></li>
+                                <li><a href="{% url 'kanatis:about' %}">{% trans 'About' %}</a></li>
+                                <li><a href="{% url 'kanatis:services' %}">{% trans 'Services' %}</a></li>
+                                <li><a href="{% url 'kanatis:teams' %}">{% trans 'Team' %}</a></li>
+                                <li><a href="{% url 'kanatis:blog' %}">{% trans 'Blog' %}</a></li>
+                                <li><a href="{% url 'kanatis:contact' %}">{% trans 'Contact' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="footer-social alignc">
+                {% for social in contact.social_networks.all %}
+                <li><a class="social-linkedin" href="{{ social.url }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
+                {% endfor %}
+            </ul>
+            <div class="foo-copyright alignc">{% trans 'Copyright' %}</div>
+        </div>
+    </div>
+</footer>
